@@ -32,3 +32,22 @@ def get_resource_from_hapi_fhir(resource_id, resource_type):
         print(f"Error al obtener el recurso: {response.status_code}")
         print(response.json())
 
+# Buscar recurso por número de documento
+def get_resource_by_document(document_number, resource_type='Patient'):
+    system = "http://www.argentina.gob.ar/dni"
+    url = f"http://hapi.fhir.org/baseR4/{resource_type}?identifier={system}|{document_number}"
+    response = requests.get(url, headers={"Accept": "application/fhir+json"})
+
+    if response.status_code == 200:
+        data = response.json()
+        total = data.get("total", 0)
+        if total > 0:
+            print(f"{total} paciente(s) encontrado(s) con documento {document_number}:")
+            for entry in data.get("entry", []):
+                print(entry["resource"])
+        else:
+            print(f"No se encontró ningún paciente con documento {document_number}.")
+    else:
+        print(f"Error en la búsqueda: {response.status_code}")
+        print(response.json())
+
