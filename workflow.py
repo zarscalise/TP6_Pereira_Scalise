@@ -11,7 +11,7 @@ if __name__ == "__main__":
     document = "42503610"
 
     # Crear y enviar el recurso de paciente
-    patient = create_patient_resource(family_name, given_name, birth_date, gender, phone)
+    patient = create_patient_resource(family_name, given_name, birth_date, gender, phone, document)
     patient_id = send_resource_to_hapi_fhir(patient, 'Patient')
 
     # Ver el recurso de paciente creado
