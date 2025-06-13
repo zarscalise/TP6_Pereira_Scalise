@@ -30,3 +30,14 @@ El recurso creado incluye los siguientes atributos:
 - birthDate: fecha de nacimiento 2000-01-01.
 
 Se adjuntas capturas de pantalla del procedimiento realizado:
+FOTOS ACA
+
+
+# Actividad 2
+Postman
+Se usó la herramienta Postman que sirve para probar cómo se conectan los sistemas. Ahí se envió manualmente el mismo formulario JSON con los datos del paciente al mismo servidor que la actividad anterior. Después de hacer el POST, se recibió una respuesta con un "201 Created", que sería una verificación del guardado.
+FOTO DEL POST
+Luego se verificó la existencia mediante un GET, al cual el sistem responde con un 200 OK, confirmando lo realizado.
+
+
+
