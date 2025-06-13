@@ -35,6 +35,7 @@ def create_patient_resource(family_name=None, given_name=None, birth_date=None, 
     # Documento como identifier
     if document_id:
         identifier = Identifier()
+        identifier.system = "http://www.argentina.gob.ar/dni"
         identifier.value = document_id
         patient.identifier = [identifier]
 
