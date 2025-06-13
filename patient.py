@@ -31,4 +31,11 @@ def create_patient_resource(family_name=None, given_name=None, birth_date=None, 
         contact.use = "mobile"
         patient.telecom = [contact]
 
+    #Agregar numero de documento
+    if document_id:
+        identifier = Identifier()
+        identifier.use = "official"
+        identifier.value = document_id
+        patient.identifier = [identifier]
+
     return patient
