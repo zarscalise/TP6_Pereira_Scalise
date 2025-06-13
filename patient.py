@@ -1,12 +1,13 @@
 from fhir.resources.patient import Patient
 from fhir.resources.humanname import HumanName
 from fhir.resources.contactpoint import ContactPoint
+from fhir.resources.identifier import Identifier  # <- agregar esto
 
 # Crear el recurso FHIR de paciente con parámetros opcionales
-def create_patient_resource(family_name=None, given_name=None, birth_date=None, gender=None, phone=None):
+def create_patient_resource(family_name=None, given_name=None, birth_date=None, gender=None, phone=None, document_id=None):
     patient = Patient()
     
-    # Agregar el nombre del paciente si está disponible
+    # Agregar el nombre del paciente
     if family_name or given_name:
         name = HumanName()
         if family_name:
@@ -15,15 +16,15 @@ def create_patient_resource(family_name=None, given_name=None, birth_date=None, 
             name.given = [given_name]
         patient.name = [name]
     
-    # Agregar la fecha de nacimiento si está disponible
+    # Fecha de nacimiento
     if birth_date:
         patient.birthDate = birth_date
 
-    # Agregar el género si está disponible
+    # Género
     if gender:
         patient.gender = gender
 
-    # Agregar información de contacto si está disponible
+    # Teléfono
     if phone:
         contact = ContactPoint()
         contact.system = "phone"
@@ -31,10 +32,9 @@ def create_patient_resource(family_name=None, given_name=None, birth_date=None, 
         contact.use = "mobile"
         patient.telecom = [contact]
 
-    #Agregar numero de documento
+    # Documento como identifier
     if document_id:
         identifier = Identifier()
-        identifier.use = "official"
         identifier.value = document_id
         patient.identifier = [identifier]
 
