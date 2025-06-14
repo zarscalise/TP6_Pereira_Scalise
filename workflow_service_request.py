@@ -1,9 +1,10 @@
 from service_request import create_service_request_resource
 from observation import create_observation_resource
 from base import send_resource_to_hapi_fhir, get_resource_from_hapi_fhir
+from fhir.resources.reference import Reference
 
 if __name__ == "__main__":
-    patient_id = "2594463"
+    patient_id = "47891960"
 
     # Crear y subir una observación (por ejemplo, fiebre alta)
     observation = create_observation_resource(
