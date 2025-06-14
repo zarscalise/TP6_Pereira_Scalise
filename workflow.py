@@ -8,7 +8,7 @@ if __name__ == "__main__":
     birth_date = "1990-01-01"
     gender = "male"
     phone = None
-    document = "42503610"
+    document = "713061310"
 
     # Crear y enviar el recurso de paciente
     patient = create_patient_resource(family_name, given_name, birth_date, gender, phone, document)

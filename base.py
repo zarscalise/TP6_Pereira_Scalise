@@ -2,7 +2,7 @@ import requests
 from patient import create_patient_resource
 
 
-# Enviar el recurso FHIR al servidor HAPI FHIR
+#Enviar el recurso FHIR al servidor HAPI FHIR
 def send_resource_to_hapi_fhir(resource,resource_type):
     url = f"http://hapi.fhir.org/baseR4/{resource_type}"
     headers = {"Content-Type": "application/fhir+json"}
@@ -20,7 +20,7 @@ def send_resource_to_hapi_fhir(resource,resource_type):
         print(response.json())
         return None
 
-# Buscar el recurso por ID 
+#Buscar el recurso por ID 
 def get_resource_from_hapi_fhir(resource_id, resource_type):
     url = f"http://hapi.fhir.org/baseR4/{resource_type}/{resource_id}"
     response = requests.get(url, headers={"Accept": "application/fhir+json"})
@@ -32,7 +32,7 @@ def get_resource_from_hapi_fhir(resource_id, resource_type):
         print(f"Error al obtener el recurso: {response.status_code}")
         print(response.json())
 
-# Buscar recurso por número de documento
+#Buscar recurso por número de documento
 def get_resource_by_document(document_number, resource_type='Patient'):
     system = "http://www.argentina.gob.ar/dni"
     url = f"http://hapi.fhir.org/baseR4/{resource_type}?identifier={system}|{document_number}"
