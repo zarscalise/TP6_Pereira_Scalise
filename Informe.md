@@ -31,21 +31,30 @@ El recurso creado incluye los siguientes atributos:
 
 Se adjuntas capturas de pantalla del procedimiento realizado:
 ![capturas](./CAPTURAS/Ejercicio1PT1.png)
-![capturas](./CAPTURAS/Ejercicio1PT2.png)
+*Figura 1: Actividad 1*
+
 ![capturas](./CAPTURAS/Ejercicio1PT3.png)
+*Figura 2: Actividad 1*
+
 ![capturas](./CAPTURAS/Ejercicio1PT4.png)
+*Figura 3: Actividad 1*
 
 
 # Actividad 2
 Postman
 Se usó la herramienta Postman que sirve para probar cómo se conectan los sistemas. Ahí se envió manualmente el mismo formulario JSON con los datos del paciente al mismo servidor que la actividad anterior. Después de hacer el POST, se recibió una respuesta con un "201 Created", que sería una verificación del guardado.
 ![capturas](./CAPTURAS/Ejercicio2PT1.png)
+*Figura 1: Actividad 2*
 ![capturas](./CAPTURAS/Ejercicio2PT2.png)
+*Figura 2: Actividad 2*
 ![capturas](./CAPTURAS/Ejercicio2PT3.png)
+*Figura 3: Actividad 2*
 ![capturas](./CAPTURAS/Ejercicio2PT4.png)
+*Figura 4: Actividad 2*
 
 Luego se verificó la existencia mediante un GET, al cual el sistem responde con un 200 OK, confirmando lo realizado.
 ![capturas](./CAPTURAS/Ejercicio2PT5.png)
+*Figura 5: Actividad 2*
 
 
 # Actividad 3
@@ -58,15 +67,21 @@ El recurso fue enviado exitosamente al servidor público HAPI FHIR (https://hapi
 ## 3b. Buscar un recurso Patient por número de documento
 
 ![capturas](./CAPTURAS/Ejercicio3PT1.png)
+*Figura 6: Actividad 3*
 ![capturas](./CAPTURAS/Ejercicio3PT2.png)
+*Figura 7: Actividad 3*
 
 
 ## 3c. Crear un recurso ServiceRequest relacionado con un recurso Observation
 
 ![capturas](./CAPTURAS/Ejercicio3PT3.png)
+*Figura 8: Actividad 3*
 ![capturas](./CAPTURAS/Ejercicio3PT4.png)
+*Figura 9: Actividad 3*
 ![capturas](./CAPTURAS/Ejercicio3PT5.png)
+*Figura 10: Actividad 3*
 ![capturas](./CAPTURAS/Ejercicio3PT6.png)
+*Figura 11: Actividad 3*
 
 
 
