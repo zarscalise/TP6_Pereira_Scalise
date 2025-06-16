@@ -31,7 +31,7 @@ El recurso creado incluye los siguientes atributos:
 
 Se adjuntas capturas de pantalla del procedimiento realizado:
 FOTOS ACA
-![capturas](./CAPTURAS/Ejercicio 1 PT1.png)
+![capturas](./CAPTURAS/Ejercicio1PT1.png)
 
 
 # Actividad 2
