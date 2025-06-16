@@ -1,6 +1,6 @@
 # TP6 - Interoperabilidad
 
-![ITBA](./logoITBA.png)
+![ITBA](./ITBA.png)
 
 ## Información
 - Instituto Tecnológico de Buenos Aires
