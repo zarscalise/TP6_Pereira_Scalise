@@ -36,7 +36,7 @@ A continuación, se adjuntan capturas de pantalla del procedimiento realizado pa
 
 
 # Actividad 2 - Postman
-Se usó la herramienta Postman que sirve para probar cómo se conectan los sistemas. Ahí se envió manualmente el mismo formulario JSON con los datos del paciente al mismo servidor utilizado en la actividad anterior. Después de hacer el POST, se recibió una respuesta con un **201 Created**, el mismo sería una verificación del guardado. 
+Se utilizó la herramienta Postman, que permite probar la comunicación entre sistemas a través de solicitudes HTTP. Ahí se envió manualmente el mismo formulario JSON con los datos del paciente al mismo servidor utilizado en la actividad anterior. Después de hacer el POST, se recibió una respuesta con un **201 Created**, el mismo sería una verificación del guardado. 
 
 ![capturas](./CAPTURAS/Ejercicio2PT1.png)
 *Figura 1: Actividad 2*
