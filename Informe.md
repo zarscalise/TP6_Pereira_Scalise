@@ -56,12 +56,12 @@ Luego se verificó la existencia mediante un GET, al cual el sistema responde co
 En esta actividad se trabajó con el estándar FHIR utilizando Python, implementando recursos clínicos, enviándolos al servidor HAPI FHIR y estableciendo relaciones entre ellos. La actividad se dividió en tres partes:
 
 ## 3a. Crear un recurso patient y enviarlos al servidor
-Se implementó en Python una función utilizando la libreria ***fhir.resources*** para crear el recurso patient, que incluye nombre, apellido, genero, fecha de nacimiento y numero de documento como identificador.
+Se implementó en Python una función utilizando la libreria ***fhir.resources*** para crear el recurso patient, que incluye nombre, apellido, género, fecha de nacimiento y número de documento como identificador.
 El recurso fue enviado exitosamente al servidor público HAPI FHIR (https://hapi.fhir.org/baseR4/Patient) utilizando una solicitud HTTP POST. El servidor devolvió un código **201 Created** y un ID asignado, confirmando que el recurso fue almacenado correctamente.
 
 ## 3b. Buscar un recurso Patient por número de documento
 Se implementó una funcion que realiza una consulta HTTP GET al servidor, utilizando el identificador nacional como parámetro. Esta búsqueda devuelve los recursos Patient que coincidan con ese identificador. 
-La consulta fue exitosa y se encontró el paciente que previamente habíamos creado, lo que termina verificando que el recurso fue almacenado correctamente y puede ser recuperable por medios interoperables
+La consulta fue exitosa y se encontró al paciente previamente creado, lo que termina verificando que el recurso fue almacenado correctamente y puede ser recuperable por medios interoperables.
 
 ![capturas](./CAPTURAS/Ejercicio3PT1.png)
 *Figura 6: Actividad 3*
@@ -70,9 +70,9 @@ La consulta fue exitosa y se encontró el paciente que previamente habíamos cre
 
 
 ## 3c. Crear un recurso ServiceRequest relacionado con un recurso Observation
-Como grupo 3, nos correspondía trabajar con el recurso ServiceRequest, el mismo representan una solicitud clínica (PE: Estudios o tratamientos).
-Para establecer una relación con otro recurso, se decidió crear primero un recurso Observation, que documento una observación clínica asociada al mismo paciente. Ambos recursos fueron construidos en Python y enviados al servidor. 
-La relación se estableció mediante el campo supportingInfo del recurso ServiceRequest, donde se referenció directamente el ID de la Observation que previamente había sido creado. El servidor termino aceptando ambos recursos, permitiendo posteriormente ver la consulta.
+Como grupo 3, nos correspondía trabajar con el recurso *ServiceRequest*, el mismo representan una solicitud clínica (PE: Estudios o tratamientos).
+Para establecer una relación con otro recurso, se decidió crear primero un recurso Observation, que documenta una observación clínica asociada al mismo paciente. Ambos recursos fueron construidos en Python y enviados al servidor. 
+La relación se estableció mediante el campo **supportingInfo** del recurso *ServiceRequest*, donde se referenció directamente el ID de *Observation* que previamente había sido creado. El servidor terminó aceptando ambos recursos, permitiendo posteriormente ver la consulta.
 
 ![capturas](./CAPTURAS/Ejercicio3PT3.png)
 *Figura 8: Actividad 3*
@@ -83,4 +83,4 @@ La relación se estableció mediante el campo supportingInfo del recurso Service
 ![capturas](./CAPTURAS/Ejercicio3PT6.png)
 *Figura 11: Actividad 3*
 
-Este trabajo permitió aplicar de forma práctica los conceptos de interoperabilidad en salud mediante la creación, envío y recuperación de recursos FHIR, tanto manualmente como programáticamente. Se logró una mejor comprensión del funcionamiento de los estándares y su implementación en sistemas reales.
+Este trabajo permitió aplicar de forma práctica los conceptos de interoperabilidad en salud mediante la creación, envío y recuperación de recursos FHIR, tanto manualmente como con Python. Se logró una mejor comprensión del funcionamiento de los estándares y su implementación en sistemas reales.
